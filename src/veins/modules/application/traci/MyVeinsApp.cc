@@ -73,3 +73,15 @@ void MyVeinsApp::handlePositionUpdate(cObject* obj)
     // the vehicle has moved. Code that reacts to new positions goes here.
     // member variables such as currentPosition and currentSpeed are updated in the parent class
 }
+
+// Función para descubrir si es ya está indexado como vecino
+
+bool myWaveAppLayer::isNeighbor(std::list<std::pair<double,int>>mylist,int addressSearch){
+    std::list < std::pair < double, int >>::iterator it2;
+    for (it2 = mylist.begin(); it2 != mylist.end(); it2++) {
+        if (it2->second==addressSearch) break;
+    }
+
+        if (it2 == mylist.end()) return false;
+        else return true;
+}
