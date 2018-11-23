@@ -46,6 +46,12 @@ void MyVeinsApp::onBSM(BasicSafetyMessage* bsm)
 {
     // Your application has received a beacon message from another car or RSU
     // code for handling the message goes here
+    if (soy la rsu)
+        id=bsm->getAddress();
+        coord = bsm->getSenderPos();
+        angel = bsm->getAngle();
+    
+        
 }
 
 void MyVeinsApp::onWSM(WaveShortMessage* wsm)
