@@ -50,6 +50,9 @@ protected:
 
     virtual void handleSelfMsg(cMessage* msg);
     virtual void handlePositionUpdate(cObject* obj);
+    mutable std::list <int> Neig;
+    
+    bool isNeighbor(std::list<std::pair<double,int>>mylist,int addressSearch);
 };
 
 } // namespace Veins
