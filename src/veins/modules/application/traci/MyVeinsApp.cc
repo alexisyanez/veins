@@ -76,10 +76,10 @@ void MyVeinsApp::handlePositionUpdate(cObject* obj)
 
 // Función para descubrir si es ya está indexado como vecino
 
-bool myWaveAppLayer::isNeighbor(std::list<std::pair<double,int>>mylist,int addressSearch){
-    std::list < std::pair < double, int >>::iterator it2;
+bool myWaveAppLayer::isNeighbor(std::list<std::pair<int,coord,>>mylist,int addressSearch){
+    std::list < std::pair <int,coord >>::iterator it2;
     for (it2 = mylist.begin(); it2 != mylist.end(); it2++) {
-        if (it2->second==addressSearch) break;
+        if (it2->first==addressSearch) break;
     }
 
         if (it2 == mylist.end()) return false;
